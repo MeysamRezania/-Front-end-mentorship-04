@@ -1,0 +1,28 @@
+:root {
+  --prm-clr: #463232;
+}
+
+
+@font-face {
+  font-family: 'gilroy-medium';
+  src: url(fonts/Gilroy-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'gilroy-light';
+  src: url(fonts/Gilroy-Light.ttf) format('truetype');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'gilroy-medium', 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+}

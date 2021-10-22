@@ -1,0 +1,785 @@
+
+
+:root {
+  --prm-clr: #463232;
+}
+
+@font-face {
+  font-family: "gilroy-medium";
+  src: url(fonts/Gilroy-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "gilroy-light";
+  src: url(fonts/Gilroy-Light.ttf) format("truetype");
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "gilroy-medium", "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  width: 100vw;
+  height: 150vh;
+  background: url(../images/p3.jpg) no-repeat center top;
+  background-size: cover;
+}
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 2rem;
+  padding: 4rem 4rem;
+}
+header nav .nav-logo {
+  font-family: "Raleway";
+  font-size: 200%;
+}
+header nav .container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+header nav .container .nav-links {
+  bottom: -1.5rem;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: capitalize;
+  font-size: 160%;
+  font-weight: bold;
+}
+header nav .container .nav-links .nav-link {
+  text-decoration: none;
+  color: var(--prm-clr);
+  display: inline-block;
+  margin: 0 2rem;
+}
+header nav .ctrl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+header nav .ctrl .nav-ctrl {
+  font-size: 150%;
+  color: var(--prm-clr);
+  margin-left: 2rem;
+  cursor: pointer;
+}
+header h1 {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 800%;
+  font-family: "gilroy-bold";
+  letter-spacing: -2px;
+  color: var(--prm-clr);
+}
+header .hero-content {
+  margin-top: 14rem;
+  margin-left: 6rem;
+  font-size: 150%;
+  font-weight: bold;
+  color: var(--prm-clr);
+  width: 28%;
+}
+header .hero-content p {
+  line-height: 1.7;
+  display: block;
+  margin-bottom: 2rem;
+}
+header .hero-content #search {
+  margin-top: 4rem;
+  background-color: #fdfdfd;
+  padding: 1rem;
+  width: 80%;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header .hero-content #search #search-input {
+  outline: none;
+  border: none;
+}
+header .hero-content #search #search-input:focus {
+  outline: none;
+}
+header .hero-content #search #search-input::-webkit-input-placeholder {
+  color: #b2b2b2;
+}
+header .hero-content #search #search-input::-moz-placeholder {
+  color: #b2b2b2;
+}
+header .hero-content #search #search-input:-ms-input-placeholder {
+  color: #b2b2b2;
+}
+header .hero-content #search #search-input::-ms-input-placeholder {
+  color: #b2b2b2;
+}
+header .hero-content #search #search-input::placeholder {
+  color: #b2b2b2;
+}
+header .hero-content #search span {
+  background-color: var(--prm-clr);
+  width: 3.5rem;
+  height: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+header .hero-content #search span i {
+  font-size: 130%;
+  color: #fdfdfd;
+}
+header .hero-content .btn-prm {
+  background-color: var(--prm-clr);
+  color: #fdfdfd;
+  display: block;
+  border: none;
+  padding: 1.75rem 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-top: 5rem;
+  -webkit-box-shadow: 0px 50px 50px -11px rgba(118, 100, 103, 0.5);
+          box-shadow: 0px 50px 50px -11px rgba(118, 100, 103, 0.5);
+  cursor: pointer;
+}
+header .tooltip {
+  position: absolute;
+  left: 59.3%;
+  top: 57%;
+  width: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+header .tooltip span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(211, 117, 34, 0.856);
+  color: #fdfdfd;
+  border-radius: 50%;
+  font-size: 200%;
+}
+header .tooltip hr {
+  margin-top: 2.3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 9rem;
+  border: solid 1px black;
+  background-color: black;
+}
+header .tooltip .info {
+  margin-top: 1.7rem;
+  color: var(--prm-clr);
+}
+header .tooltip .info h4 {
+  font-weight: bolder;
+  font-size: 150%;
+  margin-bottom: 2rem;
+}
+header .tooltip .info p {
+  font-size: 130%;
+  font-weight: bold;
+  line-height: 1.7;
+}
+
+main {
+  margin-bottom: 20rem;
+}
+main .lenders {
+  height: 18rem;
+  background-color: #fef6f0;
+  margin-bottom: 8rem;
+}
+main .lenders h2 {
+  padding-top: 2.5rem;
+  text-align: center;
+  color: var(--prm-clr);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 220%;
+}
+main .lenders .logo-container {
+  margin: 4rem 4rem 6rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+main .lenders .logo-container img {
+  height: 2.5rem;
+}
+main #about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main #about .about-flex {
+  width: 46%;
+  padding: 0 4rem;
+  margin-bottom: 10rem;
+}
+main #about .about-flex h2 {
+  color: var(--prm-clr);
+  font-size: 800%;
+  font-family: "gilroy-light";
+}
+main #about .about-flex p {
+  color: #7a7a7a;
+  font-weight: bold;
+  font-size: 150%;
+  line-height: 1.8;
+}
+main #about .about-flex .btn-prm {
+  background-color: var(--prm-clr);
+  color: #fdfdfd;
+  display: block;
+  border: none;
+  padding: 1.75rem 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-top: 3rem;
+  -webkit-box-shadow: 0px 50px 50px -11px rgba(118, 100, 103, 0.5);
+          box-shadow: 0px 50px 50px -11px rgba(118, 100, 103, 0.5);
+  cursor: pointer;
+  margin-bottom: 7rem;
+}
+main #about .about-flex .btn-scnd {
+  color: #616161;
+  background-color: white;
+  border: 1px solid var(--prm-clr);
+  display: block;
+  padding: 1.75rem 4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+main #about .about-flex img {
+  width: 100%;
+  height: 54rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #about .about-flex img.left {
+  -o-object-position: -4rem;
+     object-position: -4rem;
+}
+main #about .about-flex img.right {
+  -o-object-position: 60%;
+     object-position: 60%;
+  margin-bottom: 2rem;
+}
+main #products h2 {
+  color: var(--prm-clr);
+  text-align: center;
+  font-size: 800%;
+  font-family: "gilroy-light";
+  margin-bottom: 1rem;
+}
+main #products p {
+  color: #7a7a7a;
+  font-weight: bold;
+  font-size: 140%;
+  text-align: center;
+  letter-spacing: 1px;
+}
+main #products .showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main #products .showcase .container {
+  width: 46%;
+  padding: 0 4rem;
+  margin-top: 5rem;
+}
+main #products .showcase .container img {
+  width: 100%;
+  height: 54rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #products .showcase .container h3 {
+  color: var(--prm-clr);
+  font-size: 500%;
+  font-family: "gilroy-light";
+  margin-bottom: 1rem;
+}
+main #products .showcase .container p {
+  text-align: left;
+  line-height: 1.8;
+}
+main #products .showcase .container .stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+}
+main #products .showcase .container .stat span {
+  margin-right: 5rem;
+}
+main #products .showcase .container .stat span p:first-of-type {
+  position: relative;
+  font-size: 300%;
+  color: #215865;
+  margin-bottom: 0.5rem;
+}
+main #products .showcase .container .stat span p:first-of-type::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 6rem;
+  height: 3px;
+  background-color: var(--prm-clr);
+}
+main #products .showcase .container .btn-prm {
+  background-color: var(--prm-clr);
+  color: #fdfdfd;
+  display: inline-block;
+  border: none;
+  padding: 1.75rem 5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 3rem;
+  margin-right: 7rem;
+  -webkit-box-shadow: 0px 50px 50px -11px rgba(118, 100, 103, 0.5);
+          box-shadow: 0px 50px 50px -11px rgba(118, 100, 103, 0.5);
+  cursor: pointer;
+}
+main #products .showcase .container .btn-scnd {
+  color: #616161;
+  background-color: white;
+  border: 1px solid var(--prm-clr);
+  display: inline-block;
+  padding: 1.65rem 3.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+main .results {
+  background-color: #fffbf7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 8rem;
+}
+main .results .result {
+  display: inline-block;
+  margin: 4rem 0;
+  padding: 2rem 6%;
+  border-right: 2px solid var(--prm-clr);
+  text-align: center;
+}
+main .results .result p:first-of-type {
+  color: var(--prm-clr);
+  font-size: 350%;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+main .results .result p:last-of-type {
+  color: #7a7a7a;
+  font-weight: bold;
+  font-size: 180%;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+main .results .result:last-child {
+  border: none;
+}
+main #introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 8rem;
+  margin-bottom: 10rem;
+}
+main #introduction .intro-flex {
+  width: 46%;
+  padding: 0 4rem;
+}
+main #introduction .img-container {
+  padding-left: 8rem;
+}
+main #introduction .img-container img {
+  width: 100%;
+  height: 55rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: -28px 24px 0px 2px #edd9cb;
+          box-shadow: -28px 24px 0px 2px #edd9cb;
+}
+main #introduction .content {
+  margin-top: 6rem;
+}
+main #introduction .content h2 {
+  color: var(--prm-clr);
+  font-size: 500%;
+  font-family: "gilroy-light";
+  margin-bottom: 3rem;
+}
+main #introduction .content p {
+  color: #7a7a7a;
+  font-weight: bold;
+  font-size: 140%;
+  line-height: 1.8;
+}
+main #introduction .content .btn-prm {
+  background-color: var(--prm-clr);
+  color: #fdfdfd;
+  display: block;
+  border: none;
+  padding: 1.75rem 5rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-top: 3rem;
+  -webkit-box-shadow: 0px 50px 50px -11px rgba(118, 100, 103, 0.5);
+          box-shadow: 0px 50px 50px -11px rgba(118, 100, 103, 0.5);
+  cursor: pointer;
+  margin-top: 7rem;
+}
+main #testimonials {
+  background-color: #fffbf7;
+  padding: 8rem 0 10rem 0;
+}
+main #testimonials .title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+main #testimonials .title h2 {
+  color: var(--prm-clr);
+  text-align: center;
+  font-size: 600%;
+  font-family: "gilroy-light";
+  margin-bottom: 1rem;
+}
+main #testimonials .title p {
+  color: #7a7a7a;
+  font-weight: bold;
+  font-size: 150%;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+main #testimonials .container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main #testimonials .container .slider-ctrl {
+  position: absolute;
+  right: 11rem;
+  top: -7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main #testimonials .container .slider-ctrl span {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  border: 1.5px solid var(--prm-clr);
+  color: #7a7a7a;
+  font-size: 150%;
+  cursor: pointer;
+}
+main #testimonials .container .slider-ctrl span:hover {
+  border: 1.5px solid var(--prm-clr);
+  background-color: var(--prm-clr);
+  color: #d8d7d7;
+}
+main #testimonials .container .slider-ctrl span i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -45%);
+      -ms-transform: translate(-50%, -45%);
+          transform: translate(-50%, -45%);
+}
+main #testimonials .container .testimonial {
+  margin: 2rem;
+  width: 25%;
+  padding: 2rem;
+  background-color: white;
+}
+main #testimonials .container .testimonial span {
+  display: block;
+  color: #fd8c75;
+  margin: 3rem 0 2rem 0;
+}
+main #testimonials .container .testimonial span i {
+  font-size: 110%;
+  padding: 0 0.2rem;
+}
+main #testimonials .container .testimonial p {
+  color: #7a7a7a;
+  font-weight: bold;
+  font-size: 140%;
+  line-height: 1.8;
+}
+main #testimonials .container .testimonial .person-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem 0;
+}
+main #testimonials .container .testimonial .person-info img {
+  width: 4.5rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+main #testimonials .container .testimonial .person-info div p:first-of-type {
+  line-height: 1;
+  color: #514343;
+  font-weight: bolder;
+}
+main #testimonials .container .testimonial .person-info div p:last-of-type {
+  font-size: 120%;
+}
+main #testimonials .container .testimonial.accent {
+  -webkit-box-shadow: 8px 11px 28px -3px #d0d0d0;
+  box-shadow: 8px 11px 28px -3px #d0d0d0;
+}
+
+footer {
+  padding: 0 12rem;
+}
+footer .footer-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4rem;
+}
+footer .footer-flex .info {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+footer .footer-flex .info h3 {
+  font-family: "Raleway";
+  font-size: 200%;
+  color: #3e3e32;
+  margin-bottom: 1rem;
+  font-weight: bolder;
+}
+footer .footer-flex .info p {
+  color: #7a7a7a;
+  font-weight: bold;
+  font-size: 180%;
+  line-height: 1.8;
+}
+footer .footer-flex .info .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 4rem;
+}
+footer .footer-flex .info .socials span {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 2rem;
+  border-radius: 50%;
+  background-color: var(--prm-clr);
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 130%;
+}
+footer .footer-flex .menu,
+footer .footer-flex .categories,
+footer .footer-flex .about {
+  margin-left: 8rem;
+  text-transform: capitalize;
+  font-family: "gilroy-light";
+}
+footer .footer-flex .menu h5,
+footer .footer-flex .categories h5,
+footer .footer-flex .about h5 {
+  font-size: 250%;
+  margin-bottom: 1rem;
+  color: #5f5d5d;
+}
+footer .footer-flex .menu ul,
+footer .footer-flex .categories ul,
+footer .footer-flex .about ul {
+  list-style: none;
+}
+footer .footer-flex .menu ul a,
+footer .footer-flex .categories ul a,
+footer .footer-flex .about ul a {
+  text-decoration: none;
+  color: #7a7a7a;
+  font-weight: bold;
+  font-size: 130%;
+  line-height: 2.5;
+}
+footer hr {
+  border: solid 1px #eee;
+  background-color: #fff;
+}
+footer .copyright {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  font-size: 130%;
+  font-weight: bold;
+  color: #7a7a7a;
+}
