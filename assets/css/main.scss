@@ -55,6 +55,24 @@ header {
         color: var(--prm-clr);
         margin-left: 2rem;
         cursor: pointer;
+        &:nth-child(2) {
+          position: relative;
+          
+          .badge {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -11px;
+            right: -10px;
+            font-size: 70%;
+            width: 1.4rem;
+            height: 1.4rem;
+            border-radius: 50%;
+            background: #463232;
+            color: #d0d0d0;
+          }
+        }
       }
     }
   }
