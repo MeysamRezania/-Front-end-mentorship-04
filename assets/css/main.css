@@ -481,9 +481,11 @@ main #introduction .content .btn-prm {
 }
 main #testimonials {
   background-color: #fffbf7;
-  padding: 8rem 0 10rem 0;
+  padding: 8rem 0 5rem 0;
+  overflow-x: hidden;
 }
 main #testimonials .title {
+  position: relative;
   margin-bottom: 4rem;
   text-align: center;
 }
@@ -501,19 +503,14 @@ main #testimonials .title p {
   line-height: 1.8;
   letter-spacing: 1px;
 }
-main #testimonials .container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-main #testimonials .container .slider-ctrl {
+main #testimonials .title .slider-ctrl {
   position: absolute;
   right: 11rem;
-  top: -7rem;
+  bottom: -4rem;
   display: flex;
   justify-content: center;
 }
-main #testimonials .container .slider-ctrl span {
+main #testimonials .title .slider-ctrl span {
   position: relative;
   display: flex;
   justify-content: center;
@@ -527,22 +524,53 @@ main #testimonials .container .slider-ctrl span {
   font-size: 150%;
   cursor: pointer;
 }
-main #testimonials .container .slider-ctrl span:hover {
+main #testimonials .title .slider-ctrl span:hover {
   border: 1.5px solid var(--prm-clr);
   background-color: var(--prm-clr);
   color: #d8d7d7;
 }
-main #testimonials .container .slider-ctrl span i {
+main #testimonials .title .slider-ctrl span i {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -45%);
 }
+main #testimonials .container {
+  position: relative;
+  width: 90vw;
+  height: 40rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: start;
+  overflow-x: hidden;
+  overflow-y: unset;
+}
 main #testimonials .container .testimonial {
+  position: absolute;
   margin: 2rem;
-  width: 25%;
+  width: 25vw;
+  height: auto;
   padding: 2rem;
   background-color: white;
+  transition: 250ms box-shadow ease-in-out, 1000ms transform ease-in-out;
+}
+main #testimonials .container .testimonial:nth-child(1) {
+  left: 0vw;
+}
+main #testimonials .container .testimonial:nth-child(2) {
+  left: 30vw;
+}
+main #testimonials .container .testimonial:nth-child(3) {
+  left: 60vw;
+}
+main #testimonials .container .testimonial:nth-child(4) {
+  left: 90vw;
+}
+main #testimonials .container .testimonial:nth-child(5) {
+  left: 120vw;
+}
+main #testimonials .container .testimonial:nth-child(6) {
+  left: 150vw;
 }
 main #testimonials .container .testimonial span {
   display: block;
@@ -578,8 +606,7 @@ main #testimonials .container .testimonial .person-info div p:first-of-type {
 main #testimonials .container .testimonial .person-info div p:last-of-type {
   font-size: 120%;
 }
-main #testimonials .container .testimonial.accent {
-  -webkit-box-shadow: 8px 11px 28px -3px #d0d0d0;
+main #testimonials .container .testimonial:hover {
   box-shadow: 8px 11px 28px -3px #d0d0d0;
 }
 
