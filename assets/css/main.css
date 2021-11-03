@@ -19,7 +19,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 90%;
   font-family: "gilroy-medium", "Open Sans", sans-serif;
   scroll-behavior: smooth;
 }
@@ -34,14 +34,35 @@ header {
   height: 150vh;
   background: url(../images/p3.jpg) no-repeat center top;
   background-size: cover;
+  padding-top: 8rem;
 }
 header nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 2rem;
-  padding: 4rem 4rem;
+  margin: 0;
+  padding: 4rem 6rem;
+}
+header nav.sticky-none {
+  position: fixed;
+  overflow-y: hidden;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 2rem 6rem;
+  background-color: rgba(253, 140, 117, 0.493);
+  transition: 250ms all ease-out;
+  backdrop-filter: blur(10px);
+}
+header nav.sticky-none.sticky {
+  top: 0;
 }
 header nav .nav-logo {
   font-family: "Raleway";
@@ -642,6 +663,21 @@ footer .copyright {
   font-size: 130%;
   font-weight: bold;
   color: #7a7a7a;
+}
+
+.sticky-socials {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  transition: 500ms right ease-out;
+}
+.sticky-socials.hidden {
+  right: -5rem;
+}
+.sticky-socials span {
+  display: block;
+  padding: 1rem;
+  font-size: 180%;
 }
 
 /*# sourceMappingURL=main.css.map */

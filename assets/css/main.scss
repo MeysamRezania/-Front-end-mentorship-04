@@ -8,14 +8,39 @@ header {
   height: 150vh;
   background: url(../images/p3.jpg) no-repeat center top;
   background-size: cover;
+  padding-top: 8rem;
 
   nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0 2rem;
-    padding: 4rem 4rem;
+    margin: 0;
+    padding: 4rem 6rem;
+
+    &.sticky-none {
+      position: fixed;
+      // height: 0;
+      overflow-y: hidden;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      margin: 0;
+      padding: 2rem 6rem;
+      background-color: rgba(253, 140, 117, 0.493);
+      transition: 250ms all ease-out;
+      backdrop-filter: blur(10px);
+
+      &.sticky {
+        // height: auto;
+        top: 0;
+      }
+    }
 
     .nav-logo {
       font-family: 'Raleway';
@@ -57,7 +82,7 @@ header {
         cursor: pointer;
         &:nth-child(2) {
           position: relative;
-          
+
           .badge {
             position: absolute;
             display: flex;
@@ -633,7 +658,6 @@ footer {
           font-size: 130%;
         }
       }
-
     }
     .menu,
     .categories,
@@ -651,9 +675,9 @@ footer {
         a {
           text-decoration: none;
           color: #7a7a7a;
-        font-weight: bold;
-        font-size: 130%;
-        line-height: 2.5;
+          font-weight: bold;
+          font-size: 130%;
+          line-height: 2.5;
         }
       }
     }
@@ -671,5 +695,22 @@ footer {
     font-size: 130%;
     font-weight: bold;
     color: #7a7a7a;
+  }
+}
+
+.sticky-socials {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  transition: 500ms right ease-out;
+
+  &.hidden {
+    right: -5rem;
+  }
+
+  span {
+    display: block;
+    padding: 1rem;
+    font-size: 180%;
   }
 }
