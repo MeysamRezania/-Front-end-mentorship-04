@@ -1,4 +1,5 @@
 @import 'configs';
+@import 'buttons';
 :root {
   overflow-x: hidden;
 }
@@ -66,7 +67,12 @@ header {
           text-decoration: none;
           color: var(--prm-clr);
           display: inline-block;
+          padding-bottom: 0.2rem;
           margin: 0 2rem;
+          transition: 250ms transform ease;
+          &:hover {
+            transform: scale(105%);
+          }
         }
       }
     }
@@ -88,8 +94,8 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
-            top: -11px;
-            right: -10px;
+            top: -65%;
+            right: -55%;
             font-size: 70%;
             width: 1.4rem;
             height: 1.4rem;
@@ -245,6 +251,17 @@ main {
 
       img {
         height: 2.5rem;
+
+        &:nth-child(3) {
+          height: 3.2rem;
+        }
+        &:nth-child(5) {
+          height: 3rem;
+        }
+        &:nth-child(6) {
+          height: 3rem;
+        }
+
       }
     }
   }
@@ -665,6 +682,7 @@ footer {
         display: flex;
         justify-content: flex-start;
         margin-top: 4rem;
+        cursor: pointer;
         span {
           width: 3rem;
           height: 3rem;
@@ -676,6 +694,11 @@ footer {
           justify-content: center;
           align-items: center;
           font-size: 130%;
+          transition: 250ms transform ease;
+
+          &:hover {
+            transform: translateY(-.2rem);
+          }
         }
       }
     }
@@ -723,6 +746,7 @@ footer {
   bottom: 3rem;
   right: 3rem;
   transition: 500ms right ease-out;
+  cursor: pointer;
 
   &.hidden {
     right: -5rem;
@@ -732,5 +756,17 @@ footer {
     display: block;
     padding: 1rem;
     font-size: 180%;
+    transition: 250ms color ease;
+    color: var(--prm-clr);
+
+    &:nth-of-type(1):hover {
+      color: #1DA1F2;
+    } 
+    &:nth-of-type(2):hover {
+      color: #3b5998;
+    } 
+    &:nth-of-type(3):hover {
+      color: #8a3ab9;
+    } 
   }
 }

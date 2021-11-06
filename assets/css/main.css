@@ -24,6 +24,34 @@ html {
   scroll-behavior: smooth;
 }
 
+.btn {
+  position: relative;
+}
+.btn::after, .btn::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  transition: 0.5s;
+}
+.btn::after {
+  top: -9px;
+  left: -9px;
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent;
+}
+.btn::before {
+  bottom: -9px;
+  right: -9px;
+  border-bottom: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+.btn:hover::before, .btn:hover::after {
+  width: 30px;
+  height: 30px;
+  border-color: #222222;
+}
+
 :root {
   overflow-x: hidden;
 }
@@ -88,7 +116,12 @@ header nav .container .nav-links .nav-link {
   text-decoration: none;
   color: var(--prm-clr);
   display: inline-block;
+  padding-bottom: 0.2rem;
   margin: 0 2rem;
+  transition: 250ms transform ease;
+}
+header nav .container .nav-links .nav-link:hover {
+  transform: scale(105%);
 }
 header nav .ctrl {
   display: flex;
@@ -110,8 +143,8 @@ header nav .ctrl .nav-ctrl:nth-child(2) .badge {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: -11px;
-  right: -10px;
+  top: -65%;
+  right: -55%;
   font-size: 70%;
   width: 1.4rem;
   height: 1.4rem;
@@ -254,6 +287,15 @@ main .lenders .logo-container {
 }
 main .lenders .logo-container img {
   height: 2.5rem;
+}
+main .lenders .logo-container img:nth-child(3) {
+  height: 3.2rem;
+}
+main .lenders .logo-container img:nth-child(5) {
+  height: 3rem;
+}
+main .lenders .logo-container img:nth-child(6) {
+  height: 3rem;
 }
 main #about {
   display: flex;
@@ -638,6 +680,7 @@ footer .footer-flex .info .socials {
   display: flex;
   justify-content: flex-start;
   margin-top: 4rem;
+  cursor: pointer;
 }
 footer .footer-flex .info .socials span {
   width: 3rem;
@@ -650,6 +693,10 @@ footer .footer-flex .info .socials span {
   justify-content: center;
   align-items: center;
   font-size: 130%;
+  transition: 250ms transform ease;
+}
+footer .footer-flex .info .socials span:hover {
+  transform: translateY(-0.2rem);
 }
 footer .footer-flex .menu,
 footer .footer-flex .categories,
@@ -697,6 +744,7 @@ footer .copyright {
   bottom: 3rem;
   right: 3rem;
   transition: 500ms right ease-out;
+  cursor: pointer;
 }
 .sticky-socials.hidden {
   right: -5rem;
@@ -705,6 +753,17 @@ footer .copyright {
   display: block;
   padding: 1rem;
   font-size: 180%;
+  transition: 250ms color ease;
+  color: var(--prm-clr);
+}
+.sticky-socials span:nth-of-type(1):hover {
+  color: #1DA1F2;
+}
+.sticky-socials span:nth-of-type(2):hover {
+  color: #3b5998;
+}
+.sticky-socials span:nth-of-type(3):hover {
+  color: #8a3ab9;
 }
 
 /*# sourceMappingURL=main.css.map */
