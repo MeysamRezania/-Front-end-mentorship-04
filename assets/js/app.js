@@ -48,30 +48,40 @@ const sliderCtrlRight = document.querySelector(
   '.slider-ctrl span:last-of-type'
 );
 
-const translateXPx = sliderContainer.getBoundingClientRect().width / 3 ;
+const translateXPx = sliderContainer.getBoundingClientRect().width / 3;
 
 let currentState = 0;
 
 const translateX = (state) => {
-  sliderItems.forEach(item => {
-    item.style.transform = `translateX(${-state * translateXPx}px)`
-  })
+  sliderItems.forEach((item) => {
+    item.style.transform = `translateX(${-state * translateXPx}px)`;
+  });
 };
 
 sliderCtrlRight.addEventListener('click', () => {
-  currentState = currentState >= sliderItems.length -3 ? 0 : currentState + 1;
+  currentState = currentState >= sliderItems.length - 3 ? 0 : currentState + 1;
   // console.log(currentState >= sliderItems.length ? 0 : currentState++);
   translateX(currentState);
 });
 
 sliderCtrlLeft.addEventListener('click', () => {
-  currentState = currentState <= 0 ? sliderItems.length -3 : currentState -1;
+  currentState = currentState <= 0 ? sliderItems.length - 3 : currentState - 1;
 
   translateX(currentState);
 });
 
+// tooltip
 
+const tooltip = document.querySelector('.tooltip');
 
+const tooltipBtn = tooltip.firstElementChild;
+const tooltipLine = tooltipBtn.nextElementSibling;
+const tooltipInfo = tooltipLine.nextElementSibling;
 
+const tooltipChildren = [tooltipBtn, tooltipLine, tooltipInfo];
 
-
+tooltipBtn.addEventListener('click', () => {
+  tooltipChildren.forEach((child) => {
+    child.classList.toggle('show');
+  });
+});

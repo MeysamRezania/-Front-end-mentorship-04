@@ -52,6 +52,71 @@ html {
   border-color: #222222;
 }
 
+.tooltip {
+  position: absolute;
+  left: 60.3vw;
+  top: 85vh;
+  width: 50rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.tooltip span {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: #d37522da;
+  color: #fdfdfd;
+  backdrop-filter: blur(3px);
+  border-radius: 50%;
+  font-size: 200%;
+  cursor: pointer;
+  transition: 1000ms transform linear;
+}
+.tooltip span.show {
+  transform: rotate(90deg);
+}
+.tooltip hr {
+  margin-top: 2.3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 9rem;
+  border: solid 1px black;
+  background-color: black;
+  transition: 1s all ease;
+  transform: translateX(-2rem);
+  opacity: 0;
+}
+.tooltip hr.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+.tooltip .info {
+  margin-top: 1.7rem;
+  color: var(--prm-clr);
+  transition: 1s all ease;
+  transform: translateX(-2rem);
+  opacity: 0;
+}
+.tooltip .info h4 {
+  font-weight: bolder;
+  font-size: 150%;
+  margin-bottom: 2rem;
+}
+.tooltip .info p {
+  font-size: 130%;
+  font-weight: bold;
+  line-height: 1.7;
+}
+.tooltip .info.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 :root {
   overflow-x: hidden;
 }
@@ -218,48 +283,6 @@ header .hero-content .btn-prm {
   margin-top: 5rem;
   box-shadow: 0px 50px 50px -11px rgba(118, 100, 103, 0.5);
   cursor: pointer;
-}
-header .tooltip {
-  position: absolute;
-  left: 59.3%;
-  top: 57%;
-  width: 50rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-header .tooltip span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 5rem;
-  height: 5rem;
-  background-color: rgba(211, 117, 34, 0.856);
-  color: #fdfdfd;
-  border-radius: 50%;
-  font-size: 200%;
-}
-header .tooltip hr {
-  margin-top: 2.3rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  width: 9rem;
-  border: solid 1px black;
-  background-color: black;
-}
-header .tooltip .info {
-  margin-top: 1.7rem;
-  color: var(--prm-clr);
-}
-header .tooltip .info h4 {
-  font-weight: bolder;
-  font-size: 150%;
-  margin-bottom: 2rem;
-}
-header .tooltip .info p {
-  font-size: 130%;
-  font-weight: bold;
-  line-height: 1.7;
 }
 
 main {
